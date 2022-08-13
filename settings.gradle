@@ -1,0 +1,32 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven{
+            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
+        }
+    }
+}
+dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven{
+            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
+        }
+    }
+}
+
+rootProject.name = "Terraria"
+include ':app'
+
+gradle.settingsEvaluated {
+    println("setting: Evaluated")
+}
+
+gradle.projectsLoaded {
+    println("setting: ProjectsLoaded")
+}
+include ':palladium'

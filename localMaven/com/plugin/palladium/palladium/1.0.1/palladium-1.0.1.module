@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.plugin.palladium",
+    "module": "palladium",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "palladium-1.0.1.jar",
+          "url": "palladium-1.0.1.jar",
+          "size": 3687,
+          "sha512": "3ae7a1504debd5fa98dd9d6402bc03a718138af305f6456f59e12b090d64618d0c1015bfb5d1cf681a83da6bd9ece963ab1724bd74ecb42ca8e73062d73b5f68",
+          "sha256": "e44bd418e2b1be4f1fb5eac5086b0fd98ca615c973bd87253f5ef77e4132e340",
+          "sha1": "ee94b6eba5a81960e72bc85ce48164b1ebd22dd8",
+          "md5": "8fb9da298b888daf102b8d8dabff9162"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "palladium-1.0.1.jar",
+          "url": "palladium-1.0.1.jar",
+          "size": 3687,
+          "sha512": "3ae7a1504debd5fa98dd9d6402bc03a718138af305f6456f59e12b090d64618d0c1015bfb5d1cf681a83da6bd9ece963ab1724bd74ecb42ca8e73062d73b5f68",
+          "sha256": "e44bd418e2b1be4f1fb5eac5086b0fd98ca615c973bd87253f5ef77e4132e340",
+          "sha1": "ee94b6eba5a81960e72bc85ce48164b1ebd22dd8",
+          "md5": "8fb9da298b888daf102b8d8dabff9162"
+        }
+      ]
+    }
+  ]
+}
