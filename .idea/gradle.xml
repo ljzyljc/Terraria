@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/palladium" />
+            <option value="$PROJECT_DIR$/try-catch-plugin" />
           </set>
         </option>
       </GradleProjectSettings>

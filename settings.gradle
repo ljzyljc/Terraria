@@ -30,3 +30,4 @@ gradle.projectsLoaded {
     println("setting: ProjectsLoaded")
 }
 include ':palladium'
+include ':try-catch-plugin'

@@ -1,0 +1,44 @@
+plugins {
+    id 'java-library'
+    id 'groovy'
+    id 'maven-publish'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Gradle Plugin 依赖
+    implementation gradleApi()
+    //本地发布 Plugin
+    implementation localGroovy()
+}
+repositories {
+    mavenCentral()
+}
+
+//plugin publish
+//本地发布，发布到根目录的 /repo 文件夹下
+publishing{
+    publications{
+        mavenJava(MavenPublication){
+            group 'com.plugin.trycatch' //注意src/main/resource下的文件配置，
+                                        // 依赖就依赖这个 apply plugin: com.plugin.trycatch
+            version '1.0.1'
+
+            from components.java
+        }
+    }
+}
+publishing{
+    repositories {
+        maven{
+            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
+        }
+    }
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
