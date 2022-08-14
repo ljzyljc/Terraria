@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.plugin.palladium'
+//    id 'com.plugin.palladium'
     id 'com.plugin.trycatch'
 }
 
@@ -31,6 +31,16 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+}
+
+tryCatch {
+    hookPoint = [
+            "com.jackie.terraria.Foo": [
+                    "i"
+            ]
+    ]
+    exceptionHandler = ["com.jackie.terraria.ExceptionUtils": "handleException"]
+    returnHandler = ["com.jackie.terraria.ExceptionUtils":"handleReturn"]
 }
 
 tasks.register("hello"){

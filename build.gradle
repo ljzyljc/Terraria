@@ -3,12 +3,13 @@ buildscript {
 
     repositories {
         google()
+        jcenter()
         maven {
             url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
         }
 
         dependencies {
-            classpath 'com.plugin.palladium:palladium:1.0.1'
+//            classpath 'com.plugin.palladium:palladium:1.0.1'
             classpath 'com.plugin.trycatch:try-catch-plugin:1.0.1'
         }
     }
@@ -26,10 +27,12 @@ plugins {
 
 allprojects {
     repositories {
+        jcenter()
+        google()
         maven{
             url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
         }
-        google()
+
 
     }
 }

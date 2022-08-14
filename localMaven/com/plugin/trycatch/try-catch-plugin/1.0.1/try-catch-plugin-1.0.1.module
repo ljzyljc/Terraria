@@ -27,11 +27,11 @@
         {
           "name": "try-catch-plugin-1.0.1.jar",
           "url": "try-catch-plugin-1.0.1.jar",
-          "size": 4384,
-          "sha512": "67ebd562d3c3651e4dd38de7dfa4aa07ba9c883d076a4806688684f65b9286a007e9fc48e8f5afb2404b130ee2ff054c666e57da657376050ecc6ce0d8b50886",
-          "sha256": "d4d70c6af3a064b9daf9bc245d4305937fb54501325c9d35b38db6888d0b9100",
-          "sha1": "9f1544c3b457f940e25a9986b9d8c742bedd1686",
-          "md5": "29a5c004b909032fbe61c7d66d967d39"
+          "size": 10660,
+          "sha512": "1ea123aede6f17101e8498598f314c4d41861ee576f46e40459c62bcdada75ef7c6bdb78ca8c6604c6acd04da094e8c52be38b0ad1f6e4bd52900e18a74cc696",
+          "sha256": "0e1fb957609faa5c1f9e86c8dcb577dae3b3b6980a92c51e2be4dbc62b65e562",
+          "sha1": "66094e21c990c5bd5b659e059343c567ba5e57d0",
+          "md5": "fdba0668c8bf2fada7ec0ece83664544"
         }
       ]
     },
@@ -44,15 +44,44 @@
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.2.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "7.2"
+          }
+        },
+        {
+          "group": "com.quinn.hunter",
+          "module": "hunter-transform",
+          "version": {
+            "requires": "0.9.3"
+          },
+          "excludes": [
+            {
+              "group": "com.android.tools.build",
+              "module": "*"
+            }
+          ]
+        }
+      ],
       "files": [
         {
           "name": "try-catch-plugin-1.0.1.jar",
           "url": "try-catch-plugin-1.0.1.jar",
-          "size": 4384,
-          "sha512": "67ebd562d3c3651e4dd38de7dfa4aa07ba9c883d076a4806688684f65b9286a007e9fc48e8f5afb2404b130ee2ff054c666e57da657376050ecc6ce0d8b50886",
-          "sha256": "d4d70c6af3a064b9daf9bc245d4305937fb54501325c9d35b38db6888d0b9100",
-          "sha1": "9f1544c3b457f940e25a9986b9d8c742bedd1686",
-          "md5": "29a5c004b909032fbe61c7d66d967d39"
+          "size": 10660,
+          "sha512": "1ea123aede6f17101e8498598f314c4d41861ee576f46e40459c62bcdada75ef7c6bdb78ca8c6604c6acd04da094e8c52be38b0ad1f6e4bd52900e18a74cc696",
+          "sha256": "0e1fb957609faa5c1f9e86c8dcb577dae3b3b6980a92c51e2be4dbc62b65e562",
+          "sha1": "66094e21c990c5bd5b659e059343c567ba5e57d0",
+          "md5": "fdba0668c8bf2fada7ec0ece83664544"
         }
       ]
     }

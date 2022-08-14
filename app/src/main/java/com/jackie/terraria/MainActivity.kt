@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Foo().i("jackie")
 //        view.setOnClickListener(object : OnClickListener{
 //            override fun onClick(p0: View?) {
 //

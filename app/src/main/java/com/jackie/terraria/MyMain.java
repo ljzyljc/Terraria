@@ -1,36 +1,40 @@
 package com.jackie.terraria;
 
+////import static org.objectweb.asm.Opcodes.ACC_PUBLIC;
 //import static org.objectweb.asm.Opcodes.ACC_PUBLIC;
-import static org.objectweb.asm.Opcodes.ACC_PUBLIC;
-import static org.objectweb.asm.Opcodes.ASM7;
-import static org.objectweb.asm.Opcodes.BIPUSH;
-import static org.objectweb.asm.Opcodes.IADD;
-import static org.objectweb.asm.Opcodes.ILOAD;
-import static org.objectweb.asm.Opcodes.IRETURN;
+//import static org.objectweb.asm.Opcodes.ASM7;
+//import static org.objectweb.asm.Opcodes.BIPUSH;
+//import static org.objectweb.asm.Opcodes.IADD;
+//import static org.objectweb.asm.Opcodes.ILOAD;
+//import static org.objectweb.asm.Opcodes.IRETURN;
+//
+//import java.io.File;
+//import java.io.FileInputStream;
+//import java.io.FileNotFoundException;
+//import java.io.FileOutputStream;
+//import java.util.List;
+//import org.objectweb.asm.ClassReader;
+//import org.objectweb.asm.ClassVisitor;
+//import org.objectweb.asm.ClassWriter;
+//import org.objectweb.asm.FieldVisitor;
+//import org.objectweb.asm.Label;
+//import org.objectweb.asm.MethodVisitor;
+//import org.objectweb.asm.Opcodes;
+//import org.objectweb.asm.commons.AdviceAdapter;
+//import org.objectweb.asm.tree.ClassNode;
+//import org.objectweb.asm.tree.FieldNode;
+//import org.objectweb.asm.tree.MethodNode;
+//
+//import java.io.File;
+//import java.io.FileInputStream;
+//import org.objectweb.asm.ClassReader;
+//import org.objectweb.asm.ClassVisitor;
+//import org.objectweb.asm.ClassWriter;
+//import org.objectweb.asm.MethodVisitor;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.util.List;
-import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassVisitor;
-import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.FieldVisitor;
-import org.objectweb.asm.Label;
-import org.objectweb.asm.MethodVisitor;
-import org.objectweb.asm.Opcodes;
-import org.objectweb.asm.commons.AdviceAdapter;
-import org.objectweb.asm.tree.ClassNode;
-import org.objectweb.asm.tree.FieldNode;
-import org.objectweb.asm.tree.MethodNode;
-
-import java.io.File;
-import java.io.FileInputStream;
-import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassVisitor;
-import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.MethodVisitor;
 
 /**
  * Description:
@@ -351,69 +355,69 @@ public class MyMain {
 
         //=========================================AdviceAdapter使用 方法加上 try-catch =============================
 
-        byte[] bytes = getBytes();
-        ClassReader cr = new ClassReader(bytes);
-        ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
-        ClassVisitor cv = new ClassVisitor(ASM7,cw) {
-            Label startLabel = new Label();
-            @Override
-            public MethodVisitor visitMethod(final int access, final String name, final String descriptor,
-                    final String signature,
-                    final String[] exceptions) {
-                MethodVisitor mv = super.visitMethod(access, name, descriptor, signature, exceptions);
-                if (!"foo".equals(name)) return mv;
-
-                return new AdviceAdapter(ASM7,mv,access,name,descriptor) {
-                    @Override
-                    protected void onMethodEnter() {
-                        super.onMethodEnter();
-                        mv.visitLabel(startLabel);
-
-                        mv.visitFieldInsn(GETSTATIC,"java/lang/System","out","Ljava/io/PrintStream;");
-                        mv.visitLdcInsn("enter"+ name);
-                        mv.visitMethodInsn(INVOKEVIRTUAL,"java/io/PrintStream","println","(Ljava/lang/String;)V",false);
-                    }
-
-                    @Override
-                    public void visitMaxs(final int maxStack, final int maxLocals) {
-                        //生成异常表
-                        Label endLabel = new Label();
-                        mv.visitTryCatchBlock(startLabel,endLabel,endLabel, null);
-                        mv.visitLabel(endLabel);
-
-                        //生成异常处理代码块
-                        typeFinallyBlock(ATHROW);
-                        mv.visitInsn(ATHROW);
-                        super.visitMaxs(maxStack, maxLocals);
-                    }
-
-                    @Override
-                    protected void onMethodExit(final int opcode) {
-                        super.onMethodExit(opcode);
-                        if (opcode != ATHROW) typeFinallyBlock(opcode);
-                    }
-
-                    private void typeFinallyBlock(int opcode){
-                        mv.visitFieldInsn(GETSTATIC,"java/lang/System","out","Ljava/io/PrintStream;");
-                        if (opcode == Opcodes.ATHROW){
-                            mv.visitLdcInsn("err exit"+ name);
-                        } else {
-                            mv.visitLdcInsn("normal exit"+ name);
-                        }
-                        mv.visitMethodInsn(INVOKEVIRTUAL,"java/io/PrintStream","println","(Ljava/lang/String;)V",false);
-
-                    }
-                };
-
-
-            }
-        };
-        cr.accept(cv,0);
-        byte[] b = cw.toByteArray();
-        writeToByteFile(b);
-
-
-
+//        byte[] bytes = getBytes();
+//        ClassReader cr = new ClassReader(bytes);
+//        ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
+//        ClassVisitor cv = new ClassVisitor(ASM7,cw) {
+//            Label startLabel = new Label();
+//            @Override
+//            public MethodVisitor visitMethod(final int access, final String name, final String descriptor,
+//                    final String signature,
+//                    final String[] exceptions) {
+//                MethodVisitor mv = super.visitMethod(access, name, descriptor, signature, exceptions);
+//                if (!"foo".equals(name)) return mv;
+//
+//                return new AdviceAdapter(ASM7,mv,access,name,descriptor) {
+//                    @Override
+//                    protected void onMethodEnter() {
+//                        super.onMethodEnter();
+//                        mv.visitLabel(startLabel);
+//
+//                        mv.visitFieldInsn(GETSTATIC,"java/lang/System","out","Ljava/io/PrintStream;");
+//                        mv.visitLdcInsn("enter"+ name);
+//                        mv.visitMethodInsn(INVOKEVIRTUAL,"java/io/PrintStream","println","(Ljava/lang/String;)V",false);
+//                    }
+//
+//                    @Override
+//                    public void visitMaxs(final int maxStack, final int maxLocals) {
+//                        //生成异常表
+//                        Label endLabel = new Label();
+//                        mv.visitTryCatchBlock(startLabel,endLabel,endLabel, null);
+//                        mv.visitLabel(endLabel);
+//
+//                        //生成异常处理代码块
+//                        typeFinallyBlock(ATHROW);
+//                        mv.visitInsn(ATHROW);
+//                        super.visitMaxs(maxStack, maxLocals);
+//                    }
+//
+//                    @Override
+//                    protected void onMethodExit(final int opcode) {
+//                        super.onMethodExit(opcode);
+//                        if (opcode != ATHROW) typeFinallyBlock(opcode);
+//                    }
+//
+//                    private void typeFinallyBlock(int opcode){
+//                        mv.visitFieldInsn(GETSTATIC,"java/lang/System","out","Ljava/io/PrintStream;");
+//                        if (opcode == Opcodes.ATHROW){
+//                            mv.visitLdcInsn("err exit"+ name);
+//                        } else {
+//                            mv.visitLdcInsn("normal exit"+ name);
+//                        }
+//                        mv.visitMethodInsn(INVOKEVIRTUAL,"java/io/PrintStream","println","(Ljava/lang/String;)V",false);
+//
+//                    }
+//                };
+//
+//
+//            }
+//        };
+//        cr.accept(cv,0);
+//        byte[] b = cw.toByteArray();
+//        writeToByteFile(b);
+//
+//
+//
 
 
 
@@ -460,9 +464,11 @@ public class MyMain {
 //    }
 
     public void foo(){
-        System.out.println("hello foo 1");
-        int a = 1/0;
-        System.out.println("hello foo 2");
+        try {
+            int a = 1 / 0;
+        }catch (Exception e){
+            ExceptionUtils.handleException(e);
+        }
     }
 
 }

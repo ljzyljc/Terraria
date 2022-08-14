@@ -11,8 +11,15 @@ dependencies {
     implementation gradleApi()
     //本地发布 Plugin
     implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:7.2.1'
+    implementation 'org.ow2.asm:asm-commons:7.2'
+    implementation('com.quinn.hunter:hunter-transform:0.9.3') { //使用hunter框架
+        exclude group: 'com.android.tools.build' // 排除hunter带来的gradle传递依赖，以便自定义应用的gradle版本
+    }
 }
 repositories {
+    google()
+    jcenter()
     mavenCentral()
 }
 
