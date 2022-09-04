@@ -1,0 +1,89 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.plugin.method_excute_time",
+    "module": "method-excute-time",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "method-excute-time-1.0.1.jar",
+          "url": "method-excute-time-1.0.1.jar",
+          "size": 7983,
+          "sha512": "0553833666acfa78c81339095709841e6388cab31434118906e0513270aa52bbff2fa139d7fb023823eacd1f1ef3ea8502c44df98697217f9cba8b3dabbd8ae8",
+          "sha256": "322ed7320505d724d81efc84a24d2e3695e5d84c32995fae34f2afe333b2674b",
+          "sha1": "12125d34ac35c21530e4ad16767fb21447f36294",
+          "md5": "a45a0968423064a500cd3de0370983da"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.2.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.2"
+          }
+        },
+        {
+          "group": "com.quinn.hunter",
+          "module": "hunter-transform",
+          "version": {
+            "requires": "0.9.3"
+          },
+          "excludes": [
+            {
+              "group": "com.android.tools.build",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "method-excute-time-1.0.1.jar",
+          "url": "method-excute-time-1.0.1.jar",
+          "size": 7983,
+          "sha512": "0553833666acfa78c81339095709841e6388cab31434118906e0513270aa52bbff2fa139d7fb023823eacd1f1ef3ea8502c44df98697217f9cba8b3dabbd8ae8",
+          "sha256": "322ed7320505d724d81efc84a24d2e3695e5d84c32995fae34f2afe333b2674b",
+          "sha1": "12125d34ac35c21530e4ad16767fb21447f36294",
+          "md5": "a45a0968423064a500cd3de0370983da"
+        }
+      ]
+    }
+  ]
+}

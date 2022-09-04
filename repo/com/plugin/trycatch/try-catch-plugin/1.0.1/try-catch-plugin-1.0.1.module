@@ -1,0 +1,89 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.plugin.trycatch",
+    "module": "try-catch-plugin",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "try-catch-plugin-1.0.1.jar",
+          "url": "try-catch-plugin-1.0.1.jar",
+          "size": 10721,
+          "sha512": "58597551b50d2a87c37f65e06713d328cbc3905cbb93cabc50543c3d27d3cabde1611e5232c8d03c4540d01764bd0249712543d772ba713b83043913ccad9cc1",
+          "sha256": "e9bc68780ec489a2976f82cf13424d3760858d15e9fa113711581e234c4b8888",
+          "sha1": "a2249687750db743ae11e4b593067a22880d40aa",
+          "md5": "623d4342c0d1d82bff60431e5197cde8"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.2.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "7.2"
+          }
+        },
+        {
+          "group": "com.quinn.hunter",
+          "module": "hunter-transform",
+          "version": {
+            "requires": "0.9.3"
+          },
+          "excludes": [
+            {
+              "group": "com.android.tools.build",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "try-catch-plugin-1.0.1.jar",
+          "url": "try-catch-plugin-1.0.1.jar",
+          "size": 10721,
+          "sha512": "58597551b50d2a87c37f65e06713d328cbc3905cbb93cabc50543c3d27d3cabde1611e5232c8d03c4540d01764bd0249712543d772ba713b83043913ccad9cc1",
+          "sha256": "e9bc68780ec489a2976f82cf13424d3760858d15e9fa113711581e234c4b8888",
+          "sha1": "a2249687750db743ae11e4b593067a22880d40aa",
+          "md5": "623d4342c0d1d82bff60431e5197cde8"
+        }
+      ]
+    }
+  ]
+}

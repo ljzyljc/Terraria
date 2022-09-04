@@ -39,7 +39,7 @@ publishing{
 publishing{
     repositories {
         maven{
-            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
+            url = uri('../repo')
         }
     }
 }

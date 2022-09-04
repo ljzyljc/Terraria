@@ -4,15 +4,15 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven {
-            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
-        }
+//        maven {
+//            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
+//        }
 
         dependencies {
 //            classpath 'com.plugin.palladium:palladium:1.0.1'
-            classpath 'com.plugin.trycatch:try-catch-plugin:1.0.1'
-            classpath 'com.plugin.encodestring:encode-string:1.0.1'
-            classpath 'com.plugin.method_excute_time:method-excute-time:1.0.1'
+//            classpath 'com.plugin.trycatch:try-catch-plugin:1.0.1'
+//            classpath 'com.plugin.encodestring:encode-string:1.0.1'
+//            classpath 'com.plugin.method_excute_time:method-excute-time:1.0.1'
         }
     }
 }
@@ -31,9 +31,9 @@ allprojects {
     repositories {
         jcenter()
         google()
-        maven{
-            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
-        }
+//        maven{
+//            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
+//        }
 
 
     }

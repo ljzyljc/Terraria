@@ -2,9 +2,9 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 //    id 'com.plugin.palladium'
-    id 'com.plugin.encodestring'
-    id 'com.plugin.trycatch'
-    id 'com.plugin.method_excute_time'
+//    id 'com.plugin.encodestring'
+//    id 'com.plugin.trycatch'
+//    id 'com.plugin.method_excute_time'
 }
 
 android {
@@ -35,23 +35,23 @@ android {
     }
 }
 
-tryCatch {
-    hookPoint = [
-            "com.jackie.terraria.Foo": [
-                    "i"
-            ]
-    ]
-    exceptionHandler = ["com.jackie.terraria.ExceptionUtils": "handleException"]
-    returnHandler = ["com.jackie.terraria.ExceptionUtils":"handleReturn"]
-}
-
-encryptPackage {
-    encryptPackages = "com/jackie/terraria/Foo2"
-}
-
-method_execute_time{
-    time = "10"
-}
+//tryCatch {
+//    hookPoint = [
+//            "com.jackie.terraria.Foo": [
+//                    "i"
+//            ]
+//    ]
+//    exceptionHandler = ["com.jackie.terraria.ExceptionUtils": "handleException"]
+//    returnHandler = ["com.jackie.terraria.ExceptionUtils":"handleReturn"]
+//}
+//
+//encryptPackage {
+//    encryptPackages = "com/jackie/terraria/Foo2"
+//}
+//
+//method_execute_time{
+//    time = "10"
+//}
 
 tasks.register("hello"){
     println("hello: "+ project.parent.name)
