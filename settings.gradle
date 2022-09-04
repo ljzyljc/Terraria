@@ -31,3 +31,7 @@ gradle.projectsLoaded {
 }
 include ':palladium'
 include ':try-catch-plugin'
+include ':encode-string'
+include ':SpiDemo'
+include ':RehearseCoreApi'
+include ':method-excute-time'

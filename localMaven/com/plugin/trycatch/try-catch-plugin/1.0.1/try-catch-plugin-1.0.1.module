@@ -27,11 +27,11 @@
         {
           "name": "try-catch-plugin-1.0.1.jar",
           "url": "try-catch-plugin-1.0.1.jar",
-          "size": 10660,
-          "sha512": "1ea123aede6f17101e8498598f314c4d41861ee576f46e40459c62bcdada75ef7c6bdb78ca8c6604c6acd04da094e8c52be38b0ad1f6e4bd52900e18a74cc696",
-          "sha256": "0e1fb957609faa5c1f9e86c8dcb577dae3b3b6980a92c51e2be4dbc62b65e562",
-          "sha1": "66094e21c990c5bd5b659e059343c567ba5e57d0",
-          "md5": "fdba0668c8bf2fada7ec0ece83664544"
+          "size": 10721,
+          "sha512": "f38bc7c5822a873f6c713bd4583c7825cf56f334efcc3c1d9db83e0754ed656f814eb3e009a12f61195a81866b2da5d5a076fd991337c59d761f502c147b0131",
+          "sha256": "7931d3e444f3074e42a818b4249be3f3871449ac0b359db2e593730ee477f83f",
+          "sha1": "3aad5c73d14f482f257a4b03dc8e913331227036",
+          "md5": "51468462ddcd41ee31b149e405cf50d4"
         }
       ]
     },
@@ -77,11 +77,11 @@
         {
           "name": "try-catch-plugin-1.0.1.jar",
           "url": "try-catch-plugin-1.0.1.jar",
-          "size": 10660,
-          "sha512": "1ea123aede6f17101e8498598f314c4d41861ee576f46e40459c62bcdada75ef7c6bdb78ca8c6604c6acd04da094e8c52be38b0ad1f6e4bd52900e18a74cc696",
-          "sha256": "0e1fb957609faa5c1f9e86c8dcb577dae3b3b6980a92c51e2be4dbc62b65e562",
-          "sha1": "66094e21c990c5bd5b659e059343c567ba5e57d0",
-          "md5": "fdba0668c8bf2fada7ec0ece83664544"
+          "size": 10721,
+          "sha512": "f38bc7c5822a873f6c713bd4583c7825cf56f334efcc3c1d9db83e0754ed656f814eb3e009a12f61195a81866b2da5d5a076fd991337c59d761f502c147b0131",
+          "sha256": "7931d3e444f3074e42a818b4249be3f3871449ac0b359db2e593730ee477f83f",
+          "sha1": "3aad5c73d14f482f257a4b03dc8e913331227036",
+          "md5": "51468462ddcd41ee31b149e405cf50d4"
         }
       ]
     }

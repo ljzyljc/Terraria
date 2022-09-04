@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Foo().i("jackie")
+        System.out.println("==============")
 //        view.setOnClickListener(object : OnClickListener{
 //            override fun onClick(p0: View?) {
 //
@@ -22,6 +23,18 @@ class MainActivity : AppCompatActivity() {
 //        view.setOnClickListener {
 //
 //        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
     }
 
 }

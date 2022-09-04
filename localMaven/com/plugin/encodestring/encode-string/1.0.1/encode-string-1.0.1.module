@@ -1,0 +1,89 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.plugin.encodestring",
+    "module": "encode-string",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "encode-string-1.0.1.jar",
+          "url": "encode-string-1.0.1.jar",
+          "size": 18978,
+          "sha512": "dadd2a896b611969c041d4a62992a8aaee7c0e31e52ef674a706dbd041098564a105fb1d59ef04eea508fc4d5ed0e9323023044edd41b41e64cb0b63b620f340",
+          "sha256": "16413e408366e57b83f85f4eb4e536d402b75d246488a4722365f7d1d0ca96a0",
+          "sha1": "2a40d91f52b4121332667941099c93a178515076",
+          "md5": "6bd04987620c31e448a9367b5814b164"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.2.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "7.2"
+          }
+        },
+        {
+          "group": "com.quinn.hunter",
+          "module": "hunter-transform",
+          "version": {
+            "requires": "0.9.3"
+          },
+          "excludes": [
+            {
+              "group": "com.android.tools.build",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "encode-string-1.0.1.jar",
+          "url": "encode-string-1.0.1.jar",
+          "size": 18978,
+          "sha512": "dadd2a896b611969c041d4a62992a8aaee7c0e31e52ef674a706dbd041098564a105fb1d59ef04eea508fc4d5ed0e9323023044edd41b41e64cb0b63b620f340",
+          "sha256": "16413e408366e57b83f85f4eb4e536d402b75d246488a4722365f7d1d0ca96a0",
+          "sha1": "2a40d91f52b4121332667941099c93a178515076",
+          "md5": "6bd04987620c31e448a9367b5814b164"
+        }
+      ]
+    }
+  ]
+}

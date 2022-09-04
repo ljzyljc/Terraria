@@ -1,0 +1,51 @@
+plugins {
+    id 'java-library'
+    id 'groovy'
+    id 'maven-publish'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Gradle Plugin 依赖
+    implementation gradleApi()
+    //本地发布 Plugin
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:7.2.1'
+    implementation 'org.ow2.asm:asm-commons:9.2'
+    implementation('com.quinn.hunter:hunter-transform:0.9.3') { //使用hunter框架
+        exclude group: 'com.android.tools.build' // 排除hunter带来的gradle传递依赖，以便自定义应用的gradle版本
+    }
+}
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
+
+//plugin publish
+//本地发布，发布到根目录的 /repo 文件夹下
+publishing{
+    publications{
+        mavenJava(MavenPublication){
+            group 'com.plugin.method_excute_time' //注意src/main/resource下的文件配置，
+            // 依赖就依赖这个 apply plugin: com.plugin.method_excute_time
+            version '1.0.1'
+
+            from components.java
+        }
+    }
+}
+publishing{
+    repositories {
+        maven{
+            url uri('/Users/jackie/Desktop/WorkPlace/Terraria/localMaven')
+        }
+    }
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}

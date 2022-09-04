@@ -4,9 +4,6 @@ import android.os.Build.VERSION_CODES;
 import androidx.annotation.RequiresApi;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.MethodHandles;
-import java.lang.invoke.MethodType;
 
 /**
  * Description:
@@ -15,6 +12,10 @@ import java.lang.invoke.MethodType;
  * @date 2022/8/5
  */
 public class Foo {
+
+    private static String static_field_1 = "test_private_static";
+    private String normal_field_1 = "test_private_normal";
+    private static final String normal_field_2 = "test_private_normal_2";
 
     public byte a(String s) {
         return 0;
@@ -62,6 +63,27 @@ public class Foo {
 
     }
 
+
+    public Object test(String s,String f,String d,String m) {
+        try {
+            int a = 1 / 0;
+            int b = 1 / 0;
+            System.out.println("jackie" + a);
+            System.out.println("jackie" + s);
+            System.out.println("jackie" + f);
+            System.out.println("jackie" + d);
+            System.out.println("jackie" + m);
+            System.out.println("jackie" + a);
+            System.out.println("jackie" + b);
+            return new Object();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+
+
+    }
+
 //
 //    public Object i(String s) {
 //        Object var10000;
@@ -101,6 +123,7 @@ public class Foo {
 
     @RequiresApi(api = VERSION_CODES.O)
     public static void main(String[] args) throws Throwable {
+        System.out.println(normal_field_2);
 //        new Foo().print("jackie");
 //        Foo foo = new Foo();
 //        MethodType methodType = MethodType.methodType(void.class,String.class);  //用来表示方法签名，指定方法的返回值类型和参数类型

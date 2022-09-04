@@ -12,8 +12,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/RehearseCoreApi" />
+            <option value="$PROJECT_DIR$/SpiDemo" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/encode-string" />
+            <option value="$PROJECT_DIR$/method-excute-time" />
             <option value="$PROJECT_DIR$/palladium" />
             <option value="$PROJECT_DIR$/try-catch-plugin" />
           </set>

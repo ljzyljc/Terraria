@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+//1.先获得一个classloader
+//2.然后去加载META-INF/services/下面的文件，获取相关的配置
+//3.获取对应的实现类名, 即parse方法
+//4.利用反射，根据类名去创建对应的实例， 即nextService方法

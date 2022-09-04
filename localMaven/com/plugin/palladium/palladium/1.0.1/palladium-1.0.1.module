@@ -28,10 +28,10 @@
           "name": "palladium-1.0.1.jar",
           "url": "palladium-1.0.1.jar",
           "size": 3687,
-          "sha512": "7f16e33392b46fea3d681aee762453c644bcc8e3389f288171ca1484da4bbf4ca27042716a7b4cf0210437f99c5a4c8a855a31f818b765bcfa140cbf361937d2",
-          "sha256": "6b44f533c5d76c1cdd33fbdc4f5233adc591b4f7459656637472b2d9d03303b9",
-          "sha1": "8d9f1fcea3d578bb8ab7b4d8d999b88f72f5921c",
-          "md5": "fe6aece28154165a56dd5fa74aedbcb4"
+          "sha512": "f7bcc03265cfd446a9a6ebc1e299d111a56c9ae909b444c7bd4bab6e279c443dc30a2a0ab9a3cc1981d343c12e16549ae74b4d97d812ad455f1b3b5a56c4fdc7",
+          "sha256": "614ef1bd3fe3f639fd530e7eea03401d5b63bfdbcd2fbda22295f06572644d72",
+          "sha1": "477ad22cd0603c879e0e748711da6a42879ed759",
+          "md5": "f61aea4edfa1edb6aa0058eccf252079"
         }
       ]
     },
@@ -49,10 +49,10 @@
           "name": "palladium-1.0.1.jar",
           "url": "palladium-1.0.1.jar",
           "size": 3687,
-          "sha512": "7f16e33392b46fea3d681aee762453c644bcc8e3389f288171ca1484da4bbf4ca27042716a7b4cf0210437f99c5a4c8a855a31f818b765bcfa140cbf361937d2",
-          "sha256": "6b44f533c5d76c1cdd33fbdc4f5233adc591b4f7459656637472b2d9d03303b9",
-          "sha1": "8d9f1fcea3d578bb8ab7b4d8d999b88f72f5921c",
-          "md5": "fe6aece28154165a56dd5fa74aedbcb4"
+          "sha512": "f7bcc03265cfd446a9a6ebc1e299d111a56c9ae909b444c7bd4bab6e279c443dc30a2a0ab9a3cc1981d343c12e16549ae74b4d97d812ad455f1b3b5a56c4fdc7",
+          "sha256": "614ef1bd3fe3f639fd530e7eea03401d5b63bfdbcd2fbda22295f06572644d72",
+          "sha1": "477ad22cd0603c879e0e748711da6a42879ed759",
+          "md5": "f61aea4edfa1edb6aa0058eccf252079"
         }
       ]
     }
