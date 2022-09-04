@@ -1,12 +1,12 @@
-# Terraria
+# ASM 常用插件开发(Commonly used ASM plugin)
 
 
 ## ASM Plugin (A powerful bytecode plugin)
 
-###1. method-execute-time(统计方法执行时间,可以指定阈值) (English: calculate method execute-time(you can specify a threshold))
+### 1. method-execute-time(统计方法执行时间,可以指定阈值) (English: calculate method execute-time(you can specify a threshold))
 
 使用：build.gradle(app)下导入以下 Extention
-```aidl
+``` 
     method_execute_time{
         time = "10"
     }
@@ -18,10 +18,10 @@
 
 
 
-###2. encode-string (给字符串加密) (English: encode some specific class' String)
+### 2. encode-string (给字符串加密) (English: encode some specific class' String)
 
 使用：build.gradle(app)下导入以下 Extention
-```aidl
+``` 
 encryptPackage {
     encryptPackages = "com/jackie/terraria/Foo2"
 }
@@ -32,10 +32,10 @@ encryptPackage {
 ``` classpath 'com.github.ljzyljc.Terraria:encode-string:1.0.2' ```
 
 
-###3. try-catch-plugin (给方法添加 try-catch) (English: add try catch to some specific method)
+### 3. try-catch-plugin (给方法添加 try-catch) (English: add try catch to some specific method)
 
 使用：build.gradle(app)下导入以下 Extention
-```aidl
+``` 
 tryCatch {
     hookPoint = [
             "com.jackie.terraria.Foo": [
